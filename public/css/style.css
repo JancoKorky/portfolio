@@ -1,0 +1,27 @@
+body{
+    background:  #f7f7f9;
+}
+.modal body.modal-open {
+    padding-right: 0!important
+}
+
+body.modal-open {
+    overflow: auto
+}
+
+body.scrollable {
+    overflow-y: auto
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-start;}
+.btn {
+    position: absolute;
+    right: 10px;
+}
+
+.links-color h5,
+.links-color li>a{
+    color: #fff;
+}
