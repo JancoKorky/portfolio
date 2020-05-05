@@ -1,8 +1,13 @@
-body{
-    background:  #f7f7f9;
+body {
+    background: #f7f7f9;
 }
+
+footer{
+    margin-top: 7.5rem;
+}
+
 .modal body.modal-open {
-    padding-right: 0!important
+    padding-right: 0 !important
 }
 
 body.modal-open {
@@ -15,13 +20,55 @@ body.scrollable {
 
 .modal-footer {
     display: flex;
-    justify-content: flex-start;}
+    justify-content: flex-start;
+}
+
 .btn {
     position: absolute;
     right: 10px;
 }
 
 .links-color h5,
-.links-color li>a{
+.links-color li > a {
     color: #fff;
+}
+
+/* album settings */
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+    min-height: 11.5rem;
+}
+
+@media (min-width: 768px) {
+    .fit-image {
+        height: 11.5rem;
+    }
+}
+
+@media (min-width: 1150px) {
+    .fit-image {
+        height: 14rem;
+    }
+}
+
+/* edit rectangle in album */
+.card rect {
+    background: #61686E;
+    color: #ECECEC;
+}
+
+/* Breakpoint XS */
+@media (max-width: 575px) {
+    .d-xs-none {
+        display: none !important;
+    }
+
+    .add-album {
+        background: #61686E !important;
+    }
+
+    .add-album > .card-text {
+        color: #ECECEC !important;
+    }
 }

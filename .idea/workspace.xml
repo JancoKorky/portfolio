@@ -123,6 +123,7 @@
       <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/laracasts/generators" />
     </include_path>
   </component>
   <component name="ProjectId" id="1bAf40KMRi4iSP5t0eIt75rnlKm" />
@@ -147,16 +148,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\www\portfolio\public\img" />
-      <recent name="C:\www\portfolio\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\www\portfolio\public\css" />
       <recent name="C:\www\portfolio\public\js" />
+      <recent name="C:\www\portfolio\public\img" />
+      <recent name="C:\www\portfolio\public\css" />
       <recent name="C:\www\portfolio\public" />
       <recent name="C:\www\portfolio\resources\js" />
-      <recent name="C:\www\portfolio\resources\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\portfolio\resources\views" />
+      <recent name="C:\www\portfolio\public\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -178,6 +179,12 @@
       <workItem from="1588079629511" duration="6325000" />
       <workItem from="1588147865445" duration="9114000" />
       <workItem from="1588238521480" duration="72000" />
+      <workItem from="1588491295067" duration="11178000" />
+      <workItem from="1588510400695" duration="733000" />
+      <workItem from="1588581109450" duration="11061000" />
+      <workItem from="1588608298267" duration="146000" />
+      <workItem from="1588608497881" duration="22000" />
+      <workItem from="1588608636574" duration="2853000" />
     </task>
     <servers />
   </component>
@@ -189,6 +196,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Inspections/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588084419237" />
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1588495565942">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588495565942" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1588151472397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -197,9 +208,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588082577393" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588084641444">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1588589860411">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588084641444" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588589860411" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588587429248">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588587429248" />
   </component>
 </project>

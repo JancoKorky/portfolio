@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,3 +36,4 @@ Route::get('auth/register', function () {
 });
 
 Route::resource('user', 'UserController');
+Route::resource('user.album', 'AlbumController');
