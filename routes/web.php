@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GalleriesController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,14 +27,9 @@ Route::get('contact', function (){
     return view('contact');
 });
 
-
-Route::get('auth/login', function () {
-    return 'login';
-});
-
-Route::get('auth/register', function () {
-    return 'register';
-});
-
 Route::resource('user', 'UserController');
 Route::resource('user.album', 'AlbumController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
