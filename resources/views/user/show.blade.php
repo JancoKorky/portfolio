@@ -1,29 +1,17 @@
 @extends('master')
 
-@section('title', 'Portfólio')
+@section('title', $user->title)
 
 @section('content')
 
     <div class="container jumbotron">
-        <h1 class="display-3">Názov portfólia</h1>
-        <p class="lead">Nejaký opis portfólia resp. niečo o umelcovi.
-            This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-            to featured content or information. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-            at culpa cumque,
-            dignissimos dolor dolore doloribus eius est fugit illum minima minus necessitatibus nostrum, officia
-            omnis
-            provident repellat tempora veritatis.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <h4 class="text-muted">{{$user->name}}</h4>
+            <h1 class="display-3">{{$user->title}}</h1>
+        <div class="myContainer">
+            {!! $user->rich_text!!}
+        </div>
 
-
-        @forelse($users as $user)
-            <h3 class="text-muted">{{$user->name}}</h3>
-        @empty
-            <h3 class="text-muted">Prazdne pole userov</h3>
-        @endforelse
-
-
+            <hr/>
     </div>
 
     <hr/>

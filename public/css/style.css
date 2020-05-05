@@ -2,9 +2,19 @@ body {
     background: #f7f7f9;
 }
 
-footer{
+footer {
     margin-top: 7.5rem;
 }
+.myContainer {
+    width: 100%;
+}
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .myContainer {
+        width: 80%;
+    }
+}
+
 
 .modal body.modal-open {
     padding-right: 0 !important

@@ -148,16 +148,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\portfolio\resources\views" />
+      <recent name="C:\www\portfolio\public\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\www\portfolio\resources\views\user" />
       <recent name="C:\www\portfolio\public\js" />
       <recent name="C:\www\portfolio\public\img" />
       <recent name="C:\www\portfolio\public\css" />
       <recent name="C:\www\portfolio\public" />
-      <recent name="C:\www\portfolio\resources\js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\www\portfolio\resources\views" />
-      <recent name="C:\www\portfolio\public\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -185,6 +185,8 @@
       <workItem from="1588608298267" duration="146000" />
       <workItem from="1588608497881" duration="22000" />
       <workItem from="1588608636574" duration="2853000" />
+      <workItem from="1588665287268" duration="12000" />
+      <workItem from="1588666147812" duration="5251000" />
     </task>
     <servers />
   </component>
@@ -200,6 +202,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588495565942" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1588669417462">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588669417462" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1588151472397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -212,9 +218,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588589860411" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588587429248">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588669503037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588587429248" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588669503037" />
   </component>
 </project>

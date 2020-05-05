@@ -14,8 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('user')->with('users', $users);
+//        $users = User::all();
+//        return view('user')->with('users', $users);
+        return 'tu bude zakladný page';
     }
 
     /**
@@ -47,7 +48,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return view('user',['id' => $id]);
+        $user = User::findOrFail($id);
+
+        return view('user/show')->with('user', $user);
     }
 
     /**
