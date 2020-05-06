@@ -28,14 +28,18 @@ body.scrollable {
     overflow-y: auto
 }
 
-.modal-footer {
-    display: flex;
-    justify-content: flex-start;
-}
+/*.modal-footer {*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*}*/
 
-.btn {
-    position: absolute;
-    right: 10px;
+/*.btn {*/
+/*    position: absolute;*/
+/*    right: 10px;*/
+/*}*/
+
+.form-control{
+    background: #ccc;
 }
 
 .links-color h5,

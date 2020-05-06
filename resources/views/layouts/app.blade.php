@@ -9,9 +9,6 @@
 
     <title>@yield('title')</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     {{-- Styles --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -32,17 +29,20 @@
             <ul class="navbar-nav mr-auto">
                 @if (Request::is('user/*'))
 
-                    <li class="nav-item {{Request::}}">
+                    <li class="nav-item {{ (Route::currentRouteName() == 'user.show') ? 'active' : '' }}">
                         <a class="nav-link" href="{{url('user/'. Request::segment(2))}}">Portfólio</a>
+
                     </li>
 
-                    <li class="nav-item active">
+                    <li class="nav-item {{ (Route::currentRouteName() == 'user.album.index') ? 'active' : '' }}">
                         <a class="nav-link" href="{{url('user/'. Request::segment(2). '/album')}}">Galéria</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="#">xxx</a>
                     </li>
+
+
                 @endif
             </ul>
 

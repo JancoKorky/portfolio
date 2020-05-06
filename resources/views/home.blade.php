@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h3 class="text-muted">HOOOOME </h3>
+        <h3 class="text-muted">FORM NA SEARCH </h3>
 
     </div>
 

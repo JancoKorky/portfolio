@@ -70,10 +70,8 @@
                         alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div>
-                        <a href="{{asset('img/img_01.jpg')}}"
+                        <a class="btn btn-link" href="{{asset('img/img_01.jpg')}}"
                            target="_blank">Plná veľkosť</a>
-                    </div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center"
                             data-dismiss="modal" type="button">Close
                     </button>
