@@ -1,4 +1,4 @@
-@extends('master')
+@extends('layouts/app')
 
 @section('title', 'Albumy portfolia')
 
@@ -37,9 +37,9 @@
                         <div class="col-12 col-lg-3 col-md-6 col-sm-12">
                             {{--link alebo div--}}
                             <a href="#" class="card mb-4  text-decoration-none">
-                                <rect class="d-xs-none bd-placeholder-img card-img-top d-flex justify-content-center align-items-center fit-image">
+                                <div class="d-xs-none bd-placeholder-img card-img-top d-flex justify-content-center align-items-center fit-image">
                                     <i class="fas fa-plus display-1"></i>
-                                </rect>
+                                </div>
 
                                 <div class="card-body add-album">
                                     <h6 class="card-text">Pridať album</h6>

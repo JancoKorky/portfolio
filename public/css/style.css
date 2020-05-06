@@ -63,16 +63,16 @@ body.scrollable {
 }
 
 /* edit rectangle in album */
-.card rect {
+.card div.fit-image {
     background: #61686E;
     color: #ECECEC;
 }
 
 /* Breakpoint XS */
 @media (max-width: 575px) {
-    .d-xs-none {
-        display: none !important;
-    }
+    /*.d-xs-none {*/
+    /*    display: none !important;*/
+    /*}*/
 
     .add-album {
         background: #61686E !important;

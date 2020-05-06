@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -28,8 +29,9 @@ class LoginController extends Controller
      * @return string
      */
 //    protected $redirectTo = RouteServiceProvider::HOME;
-    public function redirectTo(){
-        return 'user/'. Auth::id();
+    public function redirectTo()
+    {
+        return 'user/' . Auth::id();
     }
 
     /**
@@ -40,5 +42,12 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        return Redirect::back();
     }
 }
