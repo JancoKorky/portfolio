@@ -40,4 +40,9 @@ class User extends Authenticatable
     public function getRichTextAttribute(){
         return add_paragraphs(filter_url(e($this->text)), 'class="lead"');
     }
+
+    public function category()
+    {
+        return $this->hasMany(Category::class);
+    }
 }

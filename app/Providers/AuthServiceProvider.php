@@ -28,8 +28,8 @@ class AuthServiceProvider extends ServiceProvider
 
         //
 
-        Gate::define('edit-portfolio', function($user){
-            return $user->id === Auth::id();
+        Gate::define('edit-portfolio', function($user, $profileUser){
+            return $user->id === $profileUser->id;
         });
     }
 }

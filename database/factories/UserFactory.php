@@ -35,7 +35,7 @@ $factory->define(User::class, function (Faker $faker) {
 
 $factory->define(Category::class, function (Faker $faker) {
     return [
-        'name' => $faker->unique()->name,
+        'category_name' => $faker->unique()->word,
         'description' => $faker->word,
         'user_id'=> User::all()->random()->id
     ];

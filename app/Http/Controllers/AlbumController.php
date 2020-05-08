@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -14,9 +15,10 @@ class AlbumController extends Controller
      */
     public function index($user)
     {
-        $user = User::findOrFail($user);
+        $user = User::query()->findOrFail($user);
+        $categories = Category::all()->where('user_id', 'LIKE', $user->id);
 
-        return view('album')->with('user', $user);
+        return view('album')->with('user', $user)->with('categories', $categories);
     }
 
     /**

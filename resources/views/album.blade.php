@@ -10,19 +10,28 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
 
+                        @can('edit-portfolio', $user)
                         <li class="sidebar-heading  justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-                            <a class="d-flex align-items-center text-muted text-decoration-none" href="#">
+                            <a class="d-flex align-items-center text-muted text-decoration-none" href="{{url('user/'.$user->id.'/category/create')}}">
                                 <span class="mr-2">Pridať kategóriu</span>
                                 <i class="fas fa-plus"></i>
                             </a>
                         </li>
+                        @endcan
 
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
-
-                                Dashboard <span class="sr-only">(current)</span>
+                                Nezaradené
                             </a>
                         </li>
+
+                        @foreach($categories as $category)
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{url('user/'.$user->id.'/category/'.$category->id)}}">
+                                    {{$category->category_name}}
+                                </a>
+                            </li>
+                        @endforeach
 
                     </ul>
                 </div>
@@ -37,7 +46,8 @@
                         <div class="col-12 col-lg-3 col-md-6 col-sm-12">
                             {{--link alebo div--}}
                             <a href="#" class="card mb-4  text-decoration-none">
-                                <div class="d-xs-none bd-placeholder-img card-img-top d-flex justify-content-center align-items-center fit-image">
+                                <div
+                                    class="d-xs-none bd-placeholder-img card-img-top d-flex justify-content-center align-items-center fit-image">
                                     <i class="fas fa-plus display-1"></i>
                                 </div>
 

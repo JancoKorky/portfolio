@@ -5,11 +5,11 @@
 @section('content')
 
     <div class="container jumbotron">
-        <div class="float-right">
-            @can('edit-portfolio', $user)
+        @can('edit-portfolio', $user)
+            <div class="float-right">
                 <a href="{{url('user/'.$user->id.'/edit')}}" class="btn btn-block btn-primary">EDITOVAT TEXTY</a>
-            @endcan
-        </div>
+            </div>
+        @endcan
         <h4 class="text-muted">{{$user->name}}</h4>
         <h1 class="display-3">{{$user->title}}</h1>
         <div class="myContainer">

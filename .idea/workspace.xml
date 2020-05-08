@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521e8ef2-f2e7-41a1-a390-0219d0dbeba4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portfolio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlbumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlbumController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/myjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_04_091817_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_04_091817_create_categories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/album.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/album.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -145,6 +136,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1bXxGVdAK4AySXmT0a6EkMwdqC0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -153,7 +147,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -164,6 +158,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\portfolio\app\Http\Requests" />
+      <recent name="C:\www\portfolio\resources\views\category" />
       <recent name="C:\www\portfolio\resources\views\user" />
       <recent name="C:\www\portfolio\app\Http\Controllers" />
     </key>
@@ -189,6 +185,8 @@
       <workItem from="1588843224748" duration="10551000" />
       <workItem from="1588857674158" duration="6033000" />
       <workItem from="1588863987147" duration="13000" />
+      <workItem from="1588946920218" duration="10083000" />
+      <workItem from="1588957739302" duration="5627000" />
     </task>
     <servers />
   </component>
@@ -216,17 +214,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588842893220" />
-    <state x="490" y="154" width="540" height="524" key="StructurePopup" timestamp="1588840449380">
+    <state x="490" y="154" width="540" height="524" key="StructurePopup" timestamp="1588952468564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588840449380" />
+    <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588952468564" />
     <state x="492" y="55" key="refactoring.ChangeSignatureDialog" timestamp="1588858708574">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="492" y="55" key="refactoring.ChangeSignatureDialog/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588858708574" />
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1588843144138">
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1588956755294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588843144138" />
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1588956755294" />
   </component>
 </project>
