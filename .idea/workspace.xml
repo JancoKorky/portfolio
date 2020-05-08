@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="521e8ef2-f2e7-41a1-a390-0219d0dbeba4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlbumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlbumController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SaveCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SaveCategoryRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_04_091817_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_04_091817_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/album.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/album.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/category" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,8 +157,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\www\portfolio\app\Http\Requests" />
       <recent name="C:\www\portfolio\resources\views\category" />
+      <recent name="C:\www\portfolio\app\Http\Requests" />
       <recent name="C:\www\portfolio\resources\views\user" />
       <recent name="C:\www\portfolio\app\Http\Controllers" />
     </key>
@@ -187,6 +186,8 @@
       <workItem from="1588863987147" duration="13000" />
       <workItem from="1588946920218" duration="10083000" />
       <workItem from="1588957739302" duration="5627000" />
+      <workItem from="1588966883682" duration="5308000" />
+      <workItem from="1588972338065" duration="8000" />
     </task>
     <servers />
   </component>

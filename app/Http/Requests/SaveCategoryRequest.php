@@ -24,7 +24,7 @@ class SaveCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'category_name' => 'required|max:255',
+            'category_name' => 'required|max:255|unique:categories',
             'description' => 'max:255'
         ];
     }

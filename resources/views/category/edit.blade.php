@@ -6,7 +6,7 @@
 
     <div class="container jumbotron">
         <h1>{{$title}}</h1>
-        {!! Form::model($user, ['action' => ['CategoryController@store', $user->id], 'method' => 'post', 'id'=>'create-form']) !!}
+        {!! Form::model($category, ['action' => ['CategoryController@update', $user->id, $category->id], 'method' => 'put', 'id'=>'edit-form']) !!}
         @include('category.form')
         {!! Form::close() !!}
     </div>

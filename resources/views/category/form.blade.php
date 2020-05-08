@@ -5,7 +5,7 @@
     'class' => 'form-control',
     'placeholder'=> 'Názov kategórie'
 ]) !!}
-    @error('name')
+    @error('category_name')
     <span class="text-danger" role="alert">
         <strong>{{ $message }}</strong>
     </span>
@@ -29,7 +29,7 @@
         Vrátit sa späť
     </a>
 
-    {!! Form::button('Editovať',['type'=>'submit',
+    {!! Form::button($title,['type'=>'submit',
     'class' => 'btn btn-outline-primary'
 ]) !!}
 </div>

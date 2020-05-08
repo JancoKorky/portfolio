@@ -1,4 +1,4 @@
-<h1>Edit portfólia</h1>
+<h1>Upraviť portfólio</h1>
 <span>Používateľ: <span class="font-weight-bold">{{ucfirst($user->name)}}</span></span>
 
 <div class="mt-3 form-group">
@@ -31,7 +31,7 @@
         Vrátit sa späť
     </a>
 
-    {!! Form::button('Editovať',['type'=>'submit',
+    {!! Form::button('Upraviť portfólio',['type'=>'submit',
     'class' => 'btn btn-outline-primary'
 ]) !!}
 </div>

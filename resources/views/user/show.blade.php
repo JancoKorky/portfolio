@@ -19,9 +19,6 @@
         <hr/>
     </div>
 
-    <hr/>
-
-
 
     {{-- IMG modal --}}
     <div class="container mt-4">

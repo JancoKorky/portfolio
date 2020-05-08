@@ -30,7 +30,7 @@ class CategoryController extends Controller
 
         $this_user = User::findOrFail($user);
         $this->authorize('edit-portfolio', $this_user);
-        return view('category/create')->with('user', $this_user);
+        return view('category/create')->with('user', $this_user)->with('title', 'Vytvoriť kategóriu');
     }
 
     /**
@@ -59,12 +59,19 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function edit($id)
+    public function edit($user, $id)
     {
-        return 'EDIT';
+        $user = User::findOrFail($user);
+        $this->authorize('edit-portfolio', $user);
+        $this->authorize('edit-category', Category::findOrFail($id));
+
+        $category = Category::findOrFail($id);
+
+        return view('category/edit')->with('user', $user)->with('category',$category)->with('title','Upraviť kategóriu');
     }
 
     /**
@@ -72,11 +79,13 @@ class CategoryController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(SaveCategoryRequest $request,$user, $category)
     {
-        //
+        $this_category = Category::findOrFail($category);
+        $this_category->update($request->all());
+        return redirect()->route('user.album.index', \Auth::id());
     }
 
     /**
