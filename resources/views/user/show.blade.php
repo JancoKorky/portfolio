@@ -1,17 +1,22 @@
 @extends('layouts/app')
 
-@section('title', $user->title)
+@section('title', ucfirst($user->name) . ' / Portfólio')
 
 @section('content')
 
     <div class="container jumbotron">
-            <h4 class="text-muted">{{$user->name}}</h4>
-            <h1 class="display-3">{{$user->title}}</h1>
+        <div class="float-right">
+            @can('edit-portfolio', $user)
+                <a href="{{url('user/'.$user->id.'/edit')}}" class="btn btn-block btn-primary">EDITOVAT TEXTY</a>
+            @endcan
+        </div>
+        <h4 class="text-muted">{{$user->name}}</h4>
+        <h1 class="display-3">{{$user->title}}</h1>
         <div class="myContainer">
             {!! $user->rich_text!!}
         </div>
 
-            <hr/>
+        <hr/>
     </div>
 
     <hr/>
@@ -70,8 +75,8 @@
                         alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                        <a class="btn btn-link" href="{{asset('img/img_01.jpg')}}"
-                           target="_blank">Plná veľkosť</a>
+                    <a class="btn btn-link" href="{{asset('img/img_01.jpg')}}"
+                       target="_blank">Plná veľkosť</a>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center"
                             data-dismiss="modal" type="button">Close
                     </button>

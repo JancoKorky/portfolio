@@ -1,6 +1,6 @@
 @extends('layouts/app')
 
-@section('title', 'Albumy portfolia')
+@section('title', ucfirst($user->name) . ' / Galéria')
 
 @section('content')
 

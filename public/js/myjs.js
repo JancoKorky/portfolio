@@ -3,10 +3,10 @@ $(document).ready(function () {
         $('#myInput').trigger('focus')
     });
 
-    $( ".card" ).hover(
-        function() {
+    $(".card").hover(
+        function () {
             $(this).addClass('shadow');
-        }, function() {
+        }, function () {
             $(this).removeClass('shadow');
         }
     );

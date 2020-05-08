@@ -8,6 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
+    {{-- Script --}}
+    <script src="{{ asset('js/jQuery.js') }}"></script>
 
     {{-- Styles --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
@@ -18,7 +20,7 @@
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Nazov mojej stranky</a>
+        <a class="navbar-brand text-danger" href="/">Portfólia.sk</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
                 aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +33,6 @@
 
                     <li class="nav-item {{ (Route::currentRouteName() == 'user.show') ? 'active' : '' }}">
                         <a class="nav-link" href="{{url('user/'. Request::segment(2))}}">Portfólio</a>
-
                     </li>
 
                     <li class="nav-item {{ (Route::currentRouteName() == 'user.album.index') ? 'active' : '' }}">
@@ -88,7 +89,7 @@
 </div>
 </body>
 
-<script src="{{ asset('js/jQuery.js') }}"></script>
+
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('js/myjs.js') }}"></script>

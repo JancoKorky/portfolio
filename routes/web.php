@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\GalleriesController;
+use App\Http\Controllers\SearchController;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Console\Input\Input;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +29,8 @@ Route::get('/', function () {
 //Route::get('contact', function (){
 //    return view('contact');
 //});
+
+Route::get('/home/action', 'HomeController@action')->name('home.action');
 
 Route::resource('user', 'UserController');
 Route::resource('user.album', 'AlbumController');
