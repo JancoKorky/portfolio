@@ -33,8 +33,9 @@ Route::get('/', function () {
 Route::get('/home/action', 'HomeController@action')->name('home.action');
 
 Route::resource('user', 'UserController')->only(['edit','update','show']);
-Route::resource('user.album', 'AlbumController')->only(['index','edit','update','show']);
-Route::resource('user.category', 'CategoryController')->only(['create','edit','update','show','store']);
+Route::resource('user.album', 'AlbumController');
+Route::resource('user.category', 'CategoryController')->only(['create','edit','update','store','destroy']);
+Route::get('user/{user}/category/{category}/delete', [ 'as' => 'user.category.delete', 'uses' => 'CategoryController@delete']);
 /*Route::get('user/{user}/album/category/{category}', 'CategoryController@show')->name('album.category.show');
 Route::get('user/{user}/album/category/{category}/edit', 'CategoryController@edit')->name('album.category.edit');
 Route::put('user/{user}/album/category/{category}', 'CategoryController@update')->name('album.category.update');

@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Requests\SaveCategoryRequest;
 use App\User;
 use Illuminate\Http\Request;
+use Session;
 
 class CategoryController extends Controller
 {
@@ -57,8 +58,28 @@ class CategoryController extends Controller
     }
 
     /**
+     * Show the form for delete the specified resource.
+     *
+     * @param $user
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
+    public function delete($user, $id)
+    {
+        $user = User::findOrFail($user);
+        $this->authorize('edit-portfolio', $user);
+        $this->authorize('edit-category', Category::findOrFail($id));
+
+        $category = Category::findOrFail($id);
+
+        return view('category/delete')->with('user', $user)->with('category',$category)->with('title','Zmazať kategóriu');
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
+     * @param $user
      * @param int $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * @throws \Illuminate\Auth\Access\AuthorizationException
@@ -77,8 +98,9 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param SaveCategoryRequest $request
+     * @param $user
+     * @param $category
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(SaveCategoryRequest $request,$user, $category)
@@ -91,11 +113,15 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $user
+     * @param $category
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy($id)
+    public function destroy($user, $category)
     {
-        //
+        $this_category = Category::findOrFail($category);
+        $this_category->delete();
+        Session::flash('message', 'Successfully deleted the nerd!');
+        return redirect()->route('user.album.index', \Auth::id());
     }
 }

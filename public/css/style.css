@@ -15,6 +15,18 @@ footer {
     }
 }
 
+#add-category{
+    border-bottom:1px solid #0d0d0d;
+}
+#add-category .nav-link{
+    padding:0.5rem 0rem;
+}
+
+ul.categories .nav-item {
+     margin-right: 0rem;
+
+}
+
 
 .modal body.modal-open {
     padding-right: 0 !important
@@ -74,15 +86,15 @@ body.scrollable {
 
 /* Breakpoint XS */
 @media (max-width: 575px) {
-    /*.d-xs-none {*/
-    /*    display: none !important;*/
+    .d-xs-none {
+        display: none !important;
+    }
+
+    /*.add-album {*/
+    /*    background: #61686E !important;*/
     /*}*/
 
-    .add-album {
-        background: #61686E !important;
-    }
-
-    .add-album > .card-text {
-        color: #ECECEC !important;
-    }
+    /*.add-album > .card-text {*/
+    /*    color: #ECECEC !important;*/
+    /*}*/
 }

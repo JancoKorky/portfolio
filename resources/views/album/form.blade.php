@@ -1,21 +1,9 @@
 <div class="mt-3 form-group">
-    {!! Form::text('category_name', null, [
+    {!! Form::text('album_name', null, [
     'class' => 'form-control',
-    'placeholder'=> 'Názov kategórie'
+    'placeholder'=> 'Názov albumu'
 ]) !!}
-    @error('category_name')
-    <span class="text-danger" role="alert">
-        <strong>{{ $message }}</strong>
-    </span>
-    @enderror
-</div>
-
-<div class="form-group">
-    {!! Form::text('description', null, [
-    'class' => 'form-control',
-    'placeholder'=> 'Popis katégorie'
-]) !!}
-    @error('description')
+    @error('album_name')
     <span class="text-danger" role="alert">
         <strong>{{ $message }}</strong>
     </span>
