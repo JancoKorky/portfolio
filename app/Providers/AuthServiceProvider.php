@@ -28,12 +28,20 @@ class AuthServiceProvider extends ServiceProvider
 
         //
 
-        Gate::define('edit-portfolio', function($user, $profileUser){
+        Gate::define('edit-portfolio', function ($user, $profileUser) {
             return $user->id === $profileUser->id;
         });
 
-        Gate::define('edit-category', function($user, $categoryUser){
+        Gate::define('edit-category', function ($user, $categoryUser) {
             return $user->id === $categoryUser->user_id;
+        });
+
+        Gate::define('edit-album', function ($user, $albumUser) {
+            return $user->id === $albumUser->user_id;
+        });
+
+        Gate::define('edit-image-portfolio', function ($user, $portfolio_image) {
+            return $user->id === $portfolio_image->user_id;
         });
     }
 }

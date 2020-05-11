@@ -4,76 +4,83 @@
 
 @section('content')
 
-    <div class="container jumbotron">
-        @can('edit-portfolio', $user)
-            <div class="float-right">
-                <a href="{{url('user/'.$user->id.'/edit')}}" class="btn btn-block btn-primary">EDITOVAT TEXTY</a>
-            </div>
-        @endcan
-        <h4 class="text-muted">{{$user->name}}</h4>
-        <h1 class="display-3">{{$user->title}}</h1>
+    @can('edit-portfolio', $user)
+        <div class="container mt-2">
+            <a href="{{url('user/'.$user->id.'/edit')}}" class="btn btn-block btn-primary">Upraviť úvodný text</a>
+        </div>
+    @endcan
+    <div class="container jumbotron mb-0 pt-4">
+        <h1 class="display-4 text-muted">{{$user->title}}</h1>
         <div class="myContainer">
             {!! $user->rich_text!!}
         </div>
-
         <hr/>
     </div>
 
-
-    {{-- IMG modal --}}
-    <div class="container mt-4">
-        <div class="mt-4 mb-3 row">
-            <div class="col-md-4">
-                <a href="#" data-target="#modalIMG" data-toggle="modal"
-                   class="">
-                    <div class="">
-                        <img alt="Card image cap" class="card-img-top"
-                             src="{{asset('img/img_01.jpg')}}"/>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card-body col-md-8">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Live the moment. Capture the moment. Share
-                    the moment. HERO6 is here, and the moment is now. #GoPro #GoProHERO6</p>
-            </div>
+    @can('edit-portfolio', $user)
+        <div class="container">
+            <a href="{{route('user.portfolio.create', $user->id)}}" class="btn btn-block btn-primary">Pridať
+                obrázok</a>
         </div>
-        <hr/>
-        <a href="#" class="text-decoration-none text-dark" data-target="#modalIMG" data-toggle="modal">
-            <div class="mt-4 mb-3 row">
+    @endcan
+    <div class="container mt-4">
 
+        @foreach($images as $index => $image)
+
+            <div class="mt-4 mb-5 row">
                 <div class="col-md-4">
-                    <div class="">
-                        <div class="">
-                            <img alt="Card image cap" class="card-img-top"
-                                 src="{{asset('img/img_01.jpg')}}"/>
-                        </div>
-                    </div>
+                    <a
+                        href="#" data-target="#modalIMG" data-toggle="modal"
+                        onclick="currentSlide({{$index+1}})">
+                        <img src="{{asset('img/portfolio/'.$user->id.'/'.$image->filename)}}"
+                             alt="{{$image->name}}"
+                             class="showimage card-img-top">
+                    </a>
                 </div>
 
                 <div class="card-body col-md-8">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Live the moment. Capture the moment. Share
-                        the moment. HERO6 is here, and the moment is now. #GoPro #GoProHERO6</p>
+                    @can('edit-portfolio', $user)
+                        <div class="d-flex justify-content-end">
+                            <a class="text-decoration-none mr-5 remove-font-size"
+                               href="{{route('user.portfolio.edit', [$user->id, $image->id])}}">
+                                Upraviť <i class="fas fa-edit mt-2 remove-font-size"></i>
+                            </a>
+                            {!! Form::model($image, ['action' => ['PortfolioImageController@destroy', $user->id, $image->id], 'method' => 'delete', 'id'=>'delete-form', 'onsubmit' => "return confirm('Naozaj chceš zmazať obrázok aj s popisom?')"]) !!}
+                            {!! Form::button('<i class="fas fa-times text-danger mt-2 remove-font-size"></i>',['type'=>'submit',
+                                        'class' => 'btn btn-link deleteBtnAlbum remove-font-size',
+                                    ]) !!}
+                            {!! Form::close() !!}
+                        </div>
+                    @endcan
+                    <h4 class="card-title">{{$image->name_by_user}}</h4>
+
+                    <p class="card-text">{!! add_paragraphs(filter_url(e($image->description)))!!}</p>
+
                 </div>
             </div>
-        </a>
+        @endforeach
     </div>
     {{-- end IMG modal --}}
     {{-- modal --}}
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG" role="dialog"
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG"
+         role="dialog"
          tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img
-                        src="{{asset('img/img_01.jpg')}}"
-                        alt="" style="width:100%">
+                    @foreach($images as $index => $image)
+                        <div class="mySlides">
+                            <img
+                                src="{{asset('img/portfolio/'.$user->id.'/'.$image->filename)}}"
+                                alt="{{$image->name}}" style="width:100%">
+                        </div>
+                    @endforeach
+
+                <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
                 <div class="modal-footer">
-                    <a class="btn btn-link" href="{{asset('img/img_01.jpg')}}"
-                       target="_blank">Plná veľkosť</a>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center"
                             data-dismiss="modal" type="button">Close
                     </button>
@@ -82,5 +89,55 @@
         </div>
     </div>
     {{-- end modal --}}
+    <script>
+        var slideIndex = 1;
+        // showSlides(slideIndex);
 
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = $(".mySlides");
+            // var dots = document.getElementsByClassName("demo");
+            // var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            // for (i = 0; i < dots.length; i++) {
+            //     dots[i].className = dots[i].className.replace(" active", "");
+            // }
+            slides[slideIndex - 1].style.display = "block";
+            // dots[slideIndex-1].className += " active";
+            // captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+        $('html').keydown(function (e) {
+
+            if ($('#modalIMG').hasClass('show')) {
+                // Left
+                if (e.keyCode === 37) {
+                    plusSlides(-1)
+                }
+                // Right
+                else if (e.keyCode === 39) {
+                    plusSlides(1)
+                }
+            }
+        });
+
+    </script>
 @endsection

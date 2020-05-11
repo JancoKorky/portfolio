@@ -2,7 +2,31 @@
 
 @section('content')
     <div class="container">
-        <h3 class="text-muted">FORM NA SEARCH </h3>
+
+        @guest
+            <div class="jumbotron">
+                <h1 class="display-4">Vítajte na PORTFOLIO.SK</h1>
+                <p class="lead">Na tejto stránke si môžete vytvoriť svoje vlastné portfólio.</p>
+                <hr class="my-4">
+                <p class="lead">
+                    <a class="btn btn-primary btn" href="{{ route('login') }}">{{ __('Login') }}</a>
+                @if (Route::has('register'))
+                        <a class="btn btn-secondary btn" href="{{ route('register') }}">{{ __('Register') }}</a>
+                @endif
+                </p>
+            </div>
+        @else
+            <div class="d-none">{!! redirect()->route('user.show',Auth::id())!!}</div>
+
+            <div class="d-flex justify-content-center">
+                <h3 class="text-muted py-5">
+                    <a class="btn-lg btn-secondary" href="{{ route('user.show',Auth::id()) }}">
+                        Vstúpiť do portfólia
+                    </a>
+                </h3>
+            </div>
+
+        @endguest
 
         {{--<form action="/search" method="POST" role="search">
             {{ csrf_field() }}
@@ -31,7 +55,7 @@
             </div>
         </div>--}}
 
-        <div class="container box">
+ {{--       <div class="container box">
             <h3 align="center">Live search in laravel using AJAX</h3><br />
             <div class="panel panel-default">
                 <div class="panel-heading">Search Customer Data</div>
@@ -58,10 +82,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--}}
 
 
-        <div class="container">
+  {{--      <div class="container">
             @if(isset($details))
                 <p> The Search results for your query <b> {{ $query }} </b> are :</p>
                 <h2>Sample User details</h2>
@@ -82,7 +106,7 @@
                     </tbody>
                 </table>
             @endif
-        </div>
+        </div>--}}
 
 {{--        {!! Form::open(['url' => 'home']) !!}
         {!! Form::label('name', 'Zadaj meno používateľa') !!}
@@ -95,7 +119,7 @@
 {{--        ->get()}}--}}
     </div>
 
-    <script>
+   {{-- <script>
         $(document).ready(function(){
 
             fetch_customer_data();
@@ -120,6 +144,6 @@
                 fetch_customer_data(query);
             });
         });
-    </script>
+    </script>--}}
 
 @endsection

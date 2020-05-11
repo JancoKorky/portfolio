@@ -3,8 +3,9 @@
 
 <div class="mt-3 form-group">
     {!! Form::text('title', null, [
-    'class' => 'form-control',
-    'placeholder'=> 'Názov tvojho portfólia'
+    'class' => 'form-control select-this',
+    'placeholder'=> 'Názov tvojho portfólia',
+    'autofocus'
 ]) !!}
     @error('title')
     <span class="text-danger" role="alert">

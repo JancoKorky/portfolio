@@ -31,7 +31,7 @@ class LoginController extends Controller
      *
      * @return string
      */
-//    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::HOME;
     public function redirectTo()
     {
         return 'user/' . Auth::id();
@@ -49,8 +49,9 @@ class LoginController extends Controller
 
     public function logout()
     {
+
         Auth::logout();
 
-        return Redirect::back();
+        return redirect()->route('home');
     }
 }

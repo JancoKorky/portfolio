@@ -20,17 +20,18 @@
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-danger" href="/">Portfólia.sk</a>
+        @guest <a class="navbar-brand text-danger" href="/">Portfólia.sk</a>
+        @else <a class="navbar-brand text-danger" href="#">Portfólia.sk</a>
+        @endguest
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
                 aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarColor02">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 @if (Request::is('user/*'))
-
                     <li class="nav-item {{ (Route::currentRouteName() == 'user.show') ? 'active' : '' }}">
                         <a class="nav-link" href="{{url('user/'. Request::segment(2))}}">Portfólio</a>
                     </li>
@@ -39,11 +40,11 @@
                         <a class="nav-link" href="{{url('user/'. Request::segment(2). '/album')}}">Galéria</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">xxx</a>
+
+
+                    <li class="nav-item {{ (Route::currentRouteName() == 'user.contact') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('user/'. Request::segment(2). '/contact')}}">Kontakt</a>
                     </li>
-
-
                 @endif
             </ul>
 
@@ -94,6 +95,6 @@
 
 
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+{{--<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>--}}
 <script src="{{ asset('js/myjs.js') }}"></script>
 </html>

@@ -3,12 +3,12 @@ $(document).ready(function () {
         $('#myInput').trigger('focus')
     });
 
-    $(".card").hover(
+    $(".card-shadow").hover(
         function () {
             $(this).addClass('shadow');
         }, function () {
             $(this).removeClass('shadow');
         }
     );
-
+    $('.select-this').select();
 });

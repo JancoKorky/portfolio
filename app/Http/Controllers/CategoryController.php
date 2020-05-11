@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Album;
 use App\Category;
 use App\Http\Requests\SaveCategoryRequest;
 use App\User;
@@ -50,11 +51,23 @@ class CategoryController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show($user_id, $category_id)
     {
-        //
+        $user = User::query()->findOrFail($user_id);
+        $categories = Category::all()->where('user_id', 'LIKE', $user->id);
+        $spec_category = Category::query()->findOrFail($category_id);
+        $albums = $spec_category->albums->where('user_id', 'LIKE', $user->id);
+
+//        $albums->categories;
+
+        return view('album')
+            ->with('user', $user)
+            ->with('categories', $categories)
+            ->with('spec_category', $spec_category)
+            ->with('albums', $albums);
+
     }
 
     /**
@@ -121,7 +134,7 @@ class CategoryController extends Controller
     {
         $this_category = Category::findOrFail($category);
         $this_category->delete();
-        Session::flash('message', 'Successfully deleted the nerd!');
+        Session::flash('message', 'Úspešne vymazaná kategória');
         return redirect()->route('user.album.index', \Auth::id());
     }
 }

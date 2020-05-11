@@ -1,7 +1,8 @@
 <div class="mt-3 form-group">
     {!! Form::text('category_name', null, [
-    'class' => 'form-control',
-    'placeholder'=> 'Názov kategórie'
+    'class' => 'form-control select-this',
+    'placeholder'=> 'Názov kategórie',
+    'autofocus'
 ]) !!}
     @error('category_name')
     <span class="text-danger" role="alert">

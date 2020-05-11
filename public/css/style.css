@@ -8,6 +8,28 @@ footer {
 .myContainer {
     width: 100%;
 }
+
+.viewport-height{
+    height: calc(100vh - 5.625rem);
+}
+
+.icon-large {
+    font-size: 1rem;
+}
+
+.delete-position {
+    /*height: 10px;*/
+}
+
+.deleteBtnAlbum {
+    padding: 0;
+}
+
+.remove-font-size {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
     .myContainer {
@@ -97,4 +119,39 @@ body.scrollable {
     /*.add-album > .card-text {*/
     /*    color: #ECECEC !important;*/
     /*}*/
+}
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }

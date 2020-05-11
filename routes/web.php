@@ -34,13 +34,22 @@ Route::get('/home/action', 'HomeController@action')->name('home.action');
 
 Route::resource('user', 'UserController')->only(['edit','update','show']);
 Route::resource('user.album', 'AlbumController');
-Route::resource('user.category', 'CategoryController')->only(['create','edit','update','store','destroy']);
+Route::resource('user.category', 'CategoryController')->only(['create','edit','update','store','destroy','show']);
 Route::get('user/{user}/category/{category}/delete', [ 'as' => 'user.category.delete', 'uses' => 'CategoryController@delete']);
+
+Route::resource('user.portfolio', 'PortfolioImageController')->only(['create', 'store', 'destroy','edit','update']);
+
+Route::get('user/{user}/contact', 'ContactController@show')->name('user.contact');
+
+Route::resource('user.album.image', 'ImageController')->only(['create','store','destroy']);
 /*Route::get('user/{user}/album/category/{category}', 'CategoryController@show')->name('album.category.show');
 Route::get('user/{user}/album/category/{category}/edit', 'CategoryController@edit')->name('album.category.edit');
 Route::put('user/{user}/album/category/{category}', 'CategoryController@update')->name('album.category.update');
 Route::get('user/{user}/album/category/create', 'CategoryController@create')->name('album.category.create');*/
 
-Auth::routes();
+Auth::routes([
+    'reset' => false,
+    'confirm' => false,
+    ]);
 
 Route::get('/home', 'HomeController@index')->name('home');

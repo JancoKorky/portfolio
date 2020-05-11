@@ -2,9 +2,10 @@
 
 namespace App;
 
+use App\Http\Requests\PortfolioImageRequest;
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class PortfolioImage extends Model
 {
     protected $guarded = ['id'];
 
@@ -12,15 +13,15 @@ class Image extends Model
 
     //
 
-    public function album()
+    public function user()
     {
-        return $this->belongsTo(Album::class);
+        return $this->belongsTo(User::class);
     }
 
-    public static function saveFile($album, $file)
+    public static function saveFile($user, $file, PortfolioImageRequest $request)
     {
 //        create file
-        $filepath = public_path('img/albums/' . $album);
+        $filepath = public_path('img/portfolio/' . $user);
         $extension = $file->getClientOriginalExtension();
 
         $filename = str_replace(
@@ -31,15 +32,16 @@ class Image extends Model
 //          Save file
         $file->move($filepath, $filename);
 
+
 //        store file in db
-        return Image::create([
-            'album_id' => $album,
+        return PortfolioImage::create([
+            'user_id' => $user,
             'name' => $file->getClientOriginalName(),
             'filename' => $filename,
             'mime' => $file->getClientMimeType(),
-            'ext' => $extension
+            'ext' => $extension,
+            'name_by_user' => $request->request->get('name_by_user'),
+            'description' => $request->request->get('description'),
         ]);
     }
-
-
 }
