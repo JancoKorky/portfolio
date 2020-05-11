@@ -26,8 +26,21 @@
     <div class="container mt-4">
 
         @foreach($images as $index => $image)
+            @can('edit-portfolio', $user)
+                <div class="d-flex justify-content-start">
+                    {!! Form::model($image, ['action' => ['PortfolioImageController@destroy', $user->id, $image->id], 'method' => 'delete', 'id'=>'delete-form', 'onsubmit' => "return confirm('Naozaj chceš zmazať obrázok aj s popisom?')"]) !!}
+                    {!! Form::button('<i class="fas fa-times text-danger mt-2 remove-font-size"></i> Zmazať',['type'=>'submit',
+                                'class' => 'btn btn-link deleteBtnAlbum remove-font-size text-decoration-none',
+                            ]) !!}
+                    {!! Form::close() !!}
+                    <a class="text-decoration-none ml-5 remove-font-size"
+                       href="{{route('user.portfolio.edit', [$user->id, $image->id])}}">
+                        <i class="fas fa-edit mt-2 remove-font-size"></i> Upraviť
+                    </a>
+                </div>
+            @endcan
+            <div class="mt-1 mb-5 row">
 
-            <div class="mt-4 mb-5 row">
                 <div class="col-md-4">
                     <a
                         href="#" data-target="#modalIMG" data-toggle="modal"
@@ -39,19 +52,7 @@
                 </div>
 
                 <div class="card-body col-md-8">
-                    @can('edit-portfolio', $user)
-                        <div class="d-flex justify-content-end">
-                            <a class="text-decoration-none mr-5 remove-font-size"
-                               href="{{route('user.portfolio.edit', [$user->id, $image->id])}}">
-                                Upraviť <i class="fas fa-edit mt-2 remove-font-size"></i>
-                            </a>
-                            {!! Form::model($image, ['action' => ['PortfolioImageController@destroy', $user->id, $image->id], 'method' => 'delete', 'id'=>'delete-form', 'onsubmit' => "return confirm('Naozaj chceš zmazať obrázok aj s popisom?')"]) !!}
-                            {!! Form::button('<i class="fas fa-times text-danger mt-2 remove-font-size"></i>',['type'=>'submit',
-                                        'class' => 'btn btn-link deleteBtnAlbum remove-font-size',
-                                    ]) !!}
-                            {!! Form::close() !!}
-                        </div>
-                    @endcan
+
                     <h4 class="card-title">{{$image->name_by_user}}</h4>
 
                     <p class="card-text">{!! add_paragraphs(filter_url(e($image->description)))!!}</p>

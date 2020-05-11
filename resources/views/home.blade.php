@@ -5,7 +5,7 @@
 
         @guest
             <div class="jumbotron">
-                <h1 class="display-4">Vítajte na PORTFOLIO.SK</h1>
+                <h1 class="display-4">Vítajte na stránke portfólia</h1>
                 <p class="lead">Na tejto stránke si môžete vytvoriť svoje vlastné portfólio.</p>
                 <hr class="my-4">
                 <p class="lead">
