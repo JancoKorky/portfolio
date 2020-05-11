@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('title')->default('Napr. Janko Hraško');
-            $table->text('text')->default('Toto je váš popis, ktorý si môžete upraviť');
+            $table->text('text')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
