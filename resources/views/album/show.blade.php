@@ -10,7 +10,7 @@
                 <div
                     class="align-items-center pt-3 pb-2 mb-3">
                     <p class="text-muted">
-                        <a href="{{url()->previous()}}">Naspäť na predošlú stránku</a>
+                        <a href="{{route('user.album.index', $user->id)}}">Naspäť na albumy</a>
                     </p>
                     <div class="row mt-2">
                         @can('edit-portfolio', $user)
