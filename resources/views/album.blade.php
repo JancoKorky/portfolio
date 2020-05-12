@@ -51,6 +51,7 @@
             </nav>
 
             <main class="col-md-9 ml-sm-auto col-lg-9 col-xl-10 px-4">
+                <p class="h3 text-muted pl-3 pt-4">Albumy</p>
                 <div
                     class="align-items-center pt-3 pb-2 mb-3">
                     @isset($spec_category)
@@ -72,8 +73,8 @@
                                 <a href="{{route('user.album.create', $user->id)}}"
                                    class="card mb-4  text-decoration-none card-shadow">
                                     <div
-                                        class="d-xs-none bd-placeholder-img card-img-top d-flex justify-content-center align-items-center fit-image">
-                                        <i class="fas fa-plus display-1"></i>
+                                        class="d-none d-xs-none d-sm-none d-md-flex bd-placeholder-img card-img-top d-flex justify-content-center align-items-end fit-image">
+                                        <i class="fas fa-plus display-1 position-absolute-plus"></i>
                                     </div>
 
                                     <div class="card-body add-album">
@@ -88,17 +89,17 @@
                             @endif
                             <div class="col-12 col-xl-3 col-lg-4 col-md-6 col-sm-12">
                                 <div class="card mb-4 shadow-sm card-shadow">
-                                    <a class=" text-decoration-none"
+                                    <a class="text-decoration-none aspect-ratio-box"
                                        href="{{route('user.album.show', [$user->id, $album->id])}}">
                                         @if($album->image()->first())
                                             <img
                                                 src="{{asset('img/albums/'.$album->id.'/'.$album->image()->first()->filename)}}"
-                                                class="bd-placeholder-img card-img-top fit-image">
+                                                class="bd-placeholder-img card-img-top">
                                         @else
                                             {{--<img src="{{asset('img/notfound.jpg')}}"
                                                  class="bd-placeholder-img card-img-top fit-image">--}}
                                             <div
-                                                class="bd-placeholder-img card-img-top d-flex justify-content-center align-items-center fit-image">
+                                                class="bd-placeholder-img card-img-top d-flex justify-content-center align-items-center position-absolute-plus-outtext">
                                                 Album bez obrázkov
                                             </div>
                                         @endif

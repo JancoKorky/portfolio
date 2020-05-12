@@ -11,17 +11,19 @@
                     class="align-items-center pt-3 pb-2 mb-3">
                     <p class="text-muted">
                         <a href="{{route('user.album.index', $user->id)}}">Naspäť na albumy</a>
+                        /
+                        <span class="text-muted">Album {{$this_album->album_name}}</span>
                     </p>
                     <div class="row mt-2">
                         @can('edit-portfolio', $user)
                             @can('edit-album', $this_album)
-                                <div class="col-12 col-xl-2 col-lg-3 col-md-3 col-sm-12">
+                                <div class="col-12 col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                     {{--link alebo div--}}
                                     <a href="{{route('user.album.image.create', [$user->id, $this_album->id])}}"
                                        class="card mb-4 text-decoration-none card-shadow">
                                         <div
                                             class="d-none d-xs-none d-sm-none d-md-flex bd-placeholder-img card-img-top d-flex justify-content-center align-items-center fit-image">
-                                            <i class="fas fa-plus display-1"></i>
+                                            <i class="fas fa-plus display-1 position-absolute-plus-outtext"></i>
                                         </div>
 
                                         <div class="d-block d-sm-block d-md-none card-body add-album">
@@ -32,14 +34,16 @@
                             @endcan
                         @endcan
                         @foreach($images as $index => $image)
-                            <div class="col-12 col-xl-2 col-lg-3 col-md-3 col-sm-12">
+                            <div class="col-12 col-xl-3 col-lg-3 col-md-3 col-sm-12">
                                 <div class="card mb-4 shadow-sm text-decoration-none card-shadow">
                                     <a
                                         href="#" data-target="#modalIMG" data-toggle="modal"
-                                        onclick="currentSlide({{$index+1}})">
-                                        <img src="{{asset('img/albums/'.$this_album->id.'/'.$image->filename)}}"
-                                             alt="{{$image->name}}"
-                                             class="showimage bd-placeholder-img card-img-top fit-image">
+                                        onclick="currentSlide({{$index+1}})"
+                                    class="aspect-ratio-box">
+                                            <img src="{{asset('img/albums/'.$this_album->id.'/'.$image->filename)}}"
+                                                 alt="{{$image->name}}"
+                                                 class="showimage bd-placeholder-img card-img-top">
+
                                     </a>
                                     @can('edit-portfolio', $user)
                                         @can('edit-album', $this_album)

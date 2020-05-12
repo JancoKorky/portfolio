@@ -84,11 +84,50 @@ body.scrollable {
 /* album settings */
 .fit-image {
     width: 100%;
-    object-fit: cover;
-    min-height: 11.5rem;
+    padding-top: 75%;
+    /*min-height: 11.5rem;*/
+}
+.aspect-ratio-box {
+    position: relative;
+}
+.aspect-ratio-box::after {
+    display: block;
+    content: '';
+    padding-bottom: 75%;
 }
 
-@media (min-width: 768px) {
+.aspect-ratio-box img {
+    /* Image should match parent box size */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.position-absolute-img {
+    width: 100%;
+    object-fit: cover;
+    position:  absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.position-absolute-plus {
+    position:  absolute;
+    top: calc(50% - 4.5rem);
+    align-items: center;
+}
+
+.position-absolute-plus-outtext {
+    position:  absolute;
+    top: calc(50% - 3rem);
+    align-items: center;
+}
+
+/*@media (min-width: 768px) {
     .fit-image {
         height: 11.5rem;
     }
@@ -98,7 +137,7 @@ body.scrollable {
     .fit-image {
         height: 14rem;
     }
-}
+}*/
 
 /* edit rectangle in album */
 .card div.fit-image {
@@ -154,4 +193,20 @@ body.scrollable {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+ /*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3rem;
+    }
+    .display-4 {
+        font-size: 1.75rem;
+    }
 }
