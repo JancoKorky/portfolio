@@ -4,11 +4,11 @@
     <list default="true" id="521e8ef2-f2e7-41a1-a390-0219d0dbeba4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/album.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/album.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/album/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/album/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/myjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,16 +155,16 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\www\portfolio\resources\lang" />
-      <recent name="C:\www\portfolio\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\www\portfolio\resources\contact" />
       <recent name="C:\www\portfolio\resources\views\portfolio" />
       <recent name="C:\www\portfolio\app\Http\Requests" />
       <recent name="C:\www\portfolio\app\Http\Controllers" />
       <recent name="C:\www\portfolio\resources\views\user" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\www\portfolio\resources\lang" />
+      <recent name="C:\www\portfolio\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -205,6 +205,16 @@
       <workItem from="1589224914937" duration="883000" />
       <workItem from="1589262404058" duration="8259000" />
       <workItem from="1589270868754" duration="116000" />
+      <workItem from="1589271535482" duration="150000" />
+      <workItem from="1589273031646" duration="616000" />
+      <workItem from="1589274761848" duration="1194000" />
+      <workItem from="1589277971535" duration="154000" />
+      <workItem from="1589280365622" duration="1859000" />
+      <workItem from="1589358359634" duration="2122000" />
+      <workItem from="1589627825452" duration="627000" />
+      <workItem from="1589910235205" duration="28000" />
+      <workItem from="1590154392441" duration="442000" />
+      <workItem from="1590510881725" duration="2354000" />
     </task>
     <servers />
   </component>
@@ -232,6 +242,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1589195778756" />
+    <state x="393" y="7" key="CommitChangelistDialog2" timestamp="1590511105165">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590511105165" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1589109429369">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

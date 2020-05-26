@@ -35,6 +35,7 @@ class LoginController extends Controller
     public function redirectTo()
     {
         return 'user/' . Auth::id();
+        //return '/';
     }
 
     /**

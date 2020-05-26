@@ -10,5 +10,5 @@ $(document).ready(function () {
             $(this).removeClass('shadow');
         }
     );
-    $('.select-this').select();
+    //$('.select-this').select();
 });

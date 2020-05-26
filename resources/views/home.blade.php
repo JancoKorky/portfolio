@@ -19,7 +19,7 @@
             {{--            <div class="d-none">{!! redirect()->route('user.show',Auth::id())!!}</div>--}}
 
             <div class="jumbotron">
-                <p class="display-4">Ahoj {{ucfirst(Auth::user()->name)}}!</p>
+                <p class="display-4">Vitaj!</p>
                 <p class="lead">Po vstupe do portfólia si môžeš upraviť úvodnú stránku Portfólio, na ktorej môžeš
                     napísať niečo o sebe a pridávať obrázky s názvom a popisom.</p>
                 <p class="lead">V galérii si môžeš vytvoriť kategórie. Následne, pri vytváraní alebo úprave albumu, môžeš albumom priradiť
