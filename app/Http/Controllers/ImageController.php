@@ -109,7 +109,9 @@ class ImageController extends Controller
 
         $image = Image::query()->findOrFail($image_id);
         $filepath = public_path('img/albums/' . $album_id . '/' . $image->filename);
-        unlink($filepath);
+        if (\File::exists($filepath)) {
+            unlink($filepath);
+        }
         $image->delete();
 
         return redirect()->route('user.album.show', [$user_id, $album_id]);

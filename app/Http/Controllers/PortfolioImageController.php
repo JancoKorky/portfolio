@@ -59,7 +59,7 @@ class PortfolioImageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -70,7 +70,7 @@ class PortfolioImageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($user_id, $image_id)
@@ -82,7 +82,7 @@ class PortfolioImageController extends Controller
 
         return view('portfolio/edit')
             ->with('user', $this_user)
-            ->with('portfolioImage',$image)
+            ->with('portfolioImage', $image)
             ->with('title', 'Upraviť texty obrázka');
     }
 
@@ -123,9 +123,12 @@ class PortfolioImageController extends Controller
         $this->authorize('edit-image-portfolio', $image);
 
         $filepath = public_path('img/portfolio/' . $user_id . '/' . $image->filename);
-        unlink($filepath);
-        $image->delete();
 
+        if (\File::exists($filepath)) {
+            unlink($filepath);
+        }
+
+        $image->delete();
         return redirect()->route('user.show', $user_id);
     }
 
