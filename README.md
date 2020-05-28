@@ -1,4 +1,6 @@
-# Portfólio - Laravel aplikácia bakalárskej práce
+# Portfólio - bakalárska práca
+
+Táto Laravel aplikácia je vytvorená pre splnenie úlohy bakalárskej práce.
 
 ## Návod na inštaláciu
 
@@ -11,6 +13,8 @@ Posledný krok je otvoriť si konzolu v priečinku s projektom a spustiť tento 
 ```
 composer install
 ```
+
+Všetky informácie o softvérovom rámci Laravel nájdete na tomto [linku](https://laravel.com/).
 
 ## License
 
