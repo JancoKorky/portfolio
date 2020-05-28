@@ -1,6 +1,6 @@
 # Portfólio - bakalárska práca
 
-Táto Laravel aplikácia je vytvorená pre splnenie úlohy bakalárskej práce.
+Táto Laravel aplikácia je vytvorená pre umelcov, ktorý hľadajú jednoduché riešenie na prezentovanie svojich najlepších prác.
 
 ## Návod na inštaláciu
 
