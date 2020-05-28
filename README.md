@@ -16,6 +16,6 @@ composer install
 
 Všetky informácie o softvérovom rámci Laravel nájdete na tomto [linku](https://laravel.com/).
 
-## License
+## Licencia
 
 Táto aplikácia je pod open-source MIT licenciou.
