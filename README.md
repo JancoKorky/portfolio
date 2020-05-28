@@ -1,6 +1,6 @@
-## Portfólio - Laravel aplikácia bakalárskej práce
+# Portfólio - Laravel aplikácia bakalárskej práce
 
-# Návod na inštaláciu
+## Návod na inštaláciu
 
 Po stiahnutí je potrebné rozbaliť do zložky serveru a prepísať názov súboru *.env.example* na *.env*.
 
